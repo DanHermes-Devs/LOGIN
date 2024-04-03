@@ -1,0 +1,21 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login OCM
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    body.bg-dark
+        .container
+            .row.w-100
+                .col-12
+                    form(action="/insert-login-to-agent", method="POST").p-5.bg-white.rounded
+                        .form-group
+                            label(for="user") Usuario
+                            input(type="user", class="form-control", id="user", name="user")
+                        .form-group
+                            label(for="status") Estado
+                            select(name="status", id="status", class="form-control")
+                                option(value="LOGIN") LOGIN
+                                option(value="LOGOUT") LOGOUT
+                        button(type="submit", class="btn btn-primary") Login
